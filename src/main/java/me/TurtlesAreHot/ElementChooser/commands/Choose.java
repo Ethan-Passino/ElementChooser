@@ -2,11 +2,14 @@ package me.TurtlesAreHot.ElementChooser.commands;
 
 import com.projectkorra.projectkorra.BendingPlayer;
 import com.projectkorra.projectkorra.Element;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.List;
 
 public class Choose implements CommandExecutor {
 
@@ -68,12 +71,25 @@ public class Choose implements CommandExecutor {
                 p.sendMessage("Valid Elements: " + elementString);
                 return false;
             }
-        }
-        else {
-            String element = args[0].toLowerCase();
-            if(!(p.hasPermission("elementchooser.choose." + element))) {
-                p.sendMessage(ChatColor.RED + " You either do not have permission to use this element or this element doesn't exist.");
+            else {
+                String element = args[0].toLowerCase();
+                if(!(p.hasPermission("elementchooser.choose." + element))) {
+                    p.sendMessage(ChatColor.RED + " You either do not have permission to use this element or this element doesn't exist.");
+                    return false;
+                }
+
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b choose " + element + " " + p.getName());
+                if(element.equals("darkspirit") || element.equals("lightspirit")) {
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add spirit " + p.getName());
+                }
+                if(element.equals("avatar")) {
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add water " + p.getName());
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add air " + p.getName());
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add fire " + p.getName());
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add earth " + p.getName());
+                }
                 return false;
+
             }
 
         }
