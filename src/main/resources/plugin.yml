@@ -1,0 +1,13 @@
+main: me.TurtlesAreHot.ElementChooser.Main
+name: ElementChooser
+version: 1.0.0
+description: This plugin allows people to choose elements with the ProjectKorra plugin
+author: TurtlesAreHot
+api-version: 1.13
+commands:
+  bluefire:
+    description: Lets you switch between bluefire and no bluefire.
+permissions:
+  elementchooser.bluefire:
+    description: Allows you to use the /bluefire command to switch between bluefire and no bluefire
+    default: op
