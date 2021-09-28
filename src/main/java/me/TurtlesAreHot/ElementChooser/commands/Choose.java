@@ -74,11 +74,12 @@ public class Choose implements CommandExecutor {
             else {
                 String element = args[0].toLowerCase();
                 if(!(p.hasPermission("elementchooser.choose." + element))) {
-                    p.sendMessage(ChatColor.RED + " You either do not have permission to use this element or this element doesn't exist.");
+                    p.sendMessage(ChatColor.RED + "You either do not have permission to use this element or this element doesn't exist.");
                     return false;
                 }
 
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b choose " + element + " " + p.getName());
+                p.sendMessage(ChatColor.GREEN + "You have been given the element(s) for " + element);
                 if(element.equals("darkspirit") || element.equals("lightspirit")) {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add spirit " + p.getName());
                 }
