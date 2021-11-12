@@ -8,7 +8,36 @@ depend: [ProjectKorra]
 commands:
   bluefire:
     description: Lets you switch between bluefire and no bluefire.
+  choose:
+    description: Lets you switch elements.
 permissions:
   elementchooser.bluefire:
     description: Allows you to use the /bluefire command to switch between bluefire and no bluefire
+    default: op
+  elementchooser.choose.water:
+    description: Allows you to choose water
+    default: op
+  elementchooser.choose.air:
+    description: Allows you to choose air
+    default: op
+  elementchooser.choose.fire:
+    description: Allows you to choose fire
+    default: op
+  elementchooser.choose.earth:
+    description: Allows you to choose earth
+    default: op
+  elementchooser.choose.chi:
+    description: Allows you to choose chi
+    default: op
+  elementchooser.choose.avatar:
+    description: Allows you to choose avatar
+    default: op
+  elementchooser.choose.spirit:
+    description: Allows you to choose spirits
+    default: op
+  elementchooser.choose.darkspirit:
+    description: Allows you to choose darkspirit
+    default: op
+  elementchooser.choose.lightspirit:
+    description: Allows you to choose lightspirit
     default: op
