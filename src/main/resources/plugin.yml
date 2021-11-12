@@ -4,6 +4,7 @@ version: 1.0.0
 description: This plugin allows people to choose elements with the ProjectKorra plugin
 author: TurtlesAreHot
 api-version: 1.13
+depend: [ProjectKorra]
 commands:
   bluefire:
     description: Lets you switch between bluefire and no bluefire.
