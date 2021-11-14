@@ -10,6 +10,10 @@ commands:
     description: Lets you switch between bluefire and no bluefire.
   choose:
     description: Lets you switch elements.
+  darkspirit:
+    description: Lets you add darkspirit.
+  lightspirit:
+    description: Lets you add lightspirit.
 permissions:
   elementchooser.bluefire:
     description: Allows you to use the /bluefire command to switch between bluefire and no bluefire
@@ -40,4 +44,10 @@ permissions:
     default: op
   elementchooser.choose.lightspirit:
     description: Allows you to choose lightspirit
+    default: op
+  elementchooser.lightspirit:
+    description: Allows you to add lightspirit
+    default: op
+  elementchooser.darkspirit:
+    description: Allows you to add darkspirit
     default: op
