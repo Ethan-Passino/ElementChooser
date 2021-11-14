@@ -34,7 +34,14 @@
             <artifactId>projectkorra</artifactId>
             <version>1.9.2</version>
             <scope>system</scope>
-            <systemPath>C:/Users/maste/Documents/Jars/ProjectKorra-1.9.2.jar</systemPath>
+            <systemPath>C:/Users/TurtlesAreHot/Downloads/ProjectKorra-1.9.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>me.xnuminousx</groupId>
+            <artifactId>spirits</artifactId>
+            <version>1.0.12</version>
+            <scope>system</scope>
+            <systemPath>C:/Users/TurtlesAreHot/Downloads/Spirits.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
