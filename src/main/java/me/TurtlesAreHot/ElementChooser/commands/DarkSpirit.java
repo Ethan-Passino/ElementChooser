@@ -24,8 +24,10 @@ public class DarkSpirit implements CommandExecutor {
         if(label.equalsIgnoreCase("darkspirit")) {
             if(p.hasPermission("elementchooser.darkspirit")) {
                 BendingPlayer bp = BendingPlayer.getBendingPlayer(p);
+                // Check if the player has more than 1 element. They can only have one and it cannot be avatar.
                 if(bp.hasElement(SpiritElement.DARK_SPIRIT)) {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " darkspirit");
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " spirit");
                     p.sendMessage(ChatColor.GREEN + "We have removed darkspirit!");
                     return false;
                 }
@@ -33,7 +35,24 @@ public class DarkSpirit implements CommandExecutor {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " lightspirit");
                     p.sendMessage(ChatColor.GREEN + "In order to get darkspirit we removed your lightspirit.");
                 }
+                if(bp.hasElement(SpiritElement.SPIRIT)) {
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " spirit");
+                    p.sendMessage(ChatColor.GREEN + "In order to get darkspirit we removed your spirit.");
+                }
+                if(bp.getElements().size() != 1) {
+                    p.sendMessage(ChatColor.RED + "You can only have one element with any spirits element.");
+                    return false;
+                }
+                if(bp.getElements().get(0) == Element.AVATAR) {
+                    p.sendMessage(ChatColor.RED + "You cannot combine spirits with avatar.");
+                    return false;
+                }
+                if(bp.getElements().get(0) == Element.CHI) {
+                    p.sendMessage(ChatColor.RED + "You cannot combine spirits with chi.");
+                    return false;
+                }
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add darkspirit " +  p.getName());
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add spirit " + p.getName());
                 p.sendMessage(ChatColor.GREEN + "You have been given the element for darkspirit!");
                 return false;
             }

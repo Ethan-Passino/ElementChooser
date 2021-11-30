@@ -1,4 +1,4 @@
-    package me.TurtlesAreHot.ElementChooser.commands;
+package me.TurtlesAreHot.ElementChooser.commands;
 
 import com.projectkorra.projectkorra.Element;
 import com.projectkorra.projectkorra.BendingPlayer;

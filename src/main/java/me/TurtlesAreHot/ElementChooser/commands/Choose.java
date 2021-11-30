@@ -2,6 +2,7 @@ package me.TurtlesAreHot.ElementChooser.commands;
 
 import com.projectkorra.projectkorra.BendingPlayer;
 import com.projectkorra.projectkorra.Element;
+import me.xnuminousx.spirits.elements.SpiritElement;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -84,6 +85,18 @@ public class Choose implements CommandExecutor {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add spirit " + p.getName());
                 }
                 if(element.equals("avatar")) {
+                    if(bp.hasElement(Element.CHI)) {
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " chi");
+                    }
+                    if(bp.hasElement(SpiritElement.LIGHT_SPIRIT)) {
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " lightspirit");
+                    }
+                    if(bp.hasElement(SpiritElement.DARK_SPIRIT)) {
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " darkspirit");
+                    }
+                    if(bp.hasElement(SpiritElement.SPIRIT)) {
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b remove " + p.getName() + " spirit");
+                    }
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add water " + p.getName());
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add air " + p.getName());
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add fire " + p.getName());
