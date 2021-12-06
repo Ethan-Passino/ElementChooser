@@ -101,6 +101,17 @@ public class Choose implements CommandExecutor {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add air " + p.getName());
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add fire " + p.getName());
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "b add earth " + p.getName());
+                    bp.addSubElement(Element.FLIGHT);
+                    bp.addSubElement(Element.SPIRITUAL);
+                    bp.addSubElement(Element.PLANT);
+                    bp.addSubElement(Element.BLOOD);
+                    bp.addSubElement(Element.ICE);
+                    bp.addSubElement(Element.HEALING);
+                    bp.addSubElement(Element.METAL);
+                    bp.addSubElement(Element.LAVA);
+                    bp.addSubElement(Element.SAND);
+                    bp.addSubElement(Element.COMBUSTION);
+                    bp.addSubElement(Element.LIGHTNING);
                 }
                 return false;
 
