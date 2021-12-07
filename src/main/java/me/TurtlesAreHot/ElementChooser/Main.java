@@ -4,8 +4,7 @@ import me.TurtlesAreHot.ElementChooser.commands.BlueFire;
 import me.TurtlesAreHot.ElementChooser.commands.Choose;
 import me.TurtlesAreHot.ElementChooser.commands.DarkSpirit;
 import me.TurtlesAreHot.ElementChooser.commands.LightSpirit;
-import me.TurtlesAreHot.ElementChooser.events.onElementAdd;
-import me.TurtlesAreHot.ElementChooser.events.onJoin;
+import me.TurtlesAreHot.ElementChooser.events.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -16,6 +15,7 @@ public class Main extends JavaPlugin {
         getCommand("choose").setExecutor(new Choose());
         getCommand("darkspirit").setExecutor(new DarkSpirit());
         getCommand("lightspirit").setExecutor(new LightSpirit());
+        this.getServer().getPluginManager().registerEvents(new onCommand(), this);
         this.getServer().getPluginManager().registerEvents(new onElementAdd(), this);
         this.getServer().getPluginManager().registerEvents(new onJoin(), this);
     }
