@@ -15,7 +15,6 @@ public class Main extends JavaPlugin {
         getCommand("choose").setExecutor(new Choose());
         getCommand("darkspirit").setExecutor(new DarkSpirit());
         getCommand("lightspirit").setExecutor(new LightSpirit());
-        this.getServer().getPluginManager().registerEvents(new onCommand(), this);
         this.getServer().getPluginManager().registerEvents(new onElementAdd(), this);
         this.getServer().getPluginManager().registerEvents(new onJoin(), this);
     }
